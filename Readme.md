@@ -9,9 +9,21 @@
 
 ## API
 
-### scrollTo(x, y)
+### scrollTo(x, y, [options])
 
-  Scroll to the given point `(x, y)`:
+  Scroll to the given point `(x, y)` with the given `options`:
+
+  - `ease` easing function ["out-circ"] (view [ease](https://github.com/component/ease) for more)
+  - `duration` animation duration [1000]
+
+```js
+var scrollTo = require('scroll-to');
+
+scrollTo(500, 1200, {
+  ease: 'out-bounce',
+  duration: 1500
+});
+```
 
 ## License
 
