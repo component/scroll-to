@@ -1,7 +1,7 @@
 
 # scroll-to
 
-  Smooth window scroll to position with requestAnimationFrame
+  Smooth window scroll to position with requestAnimationFrame and [Tween](https://github.com/component/tween).
 
 ## Installation
 
