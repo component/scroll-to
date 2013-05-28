@@ -13,8 +13,8 @@
 
   Scroll to the given point `(x, y)` with the given `options`:
 
-  - `ease` easing function ["out-circ"] (view [ease](https://github.com/component/ease) for more)
-  - `duration` animation duration [1000]
+  - `ease` easing function defaulting to "out-circ" (view [ease](https://github.com/component/ease) for more)
+  - `duration` animation duration defaulting to `1000`
 
 ```js
 var scrollTo = require('scroll-to');
