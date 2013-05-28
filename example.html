@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>scroll-to - smooth javascript window scrolling with requestAnimationFrame</title>
+  <style>
+    body {
+      padding: 50px;
+    }
+
+    ul {
+      min-width: 1500px;
+    }
+
+    ul li {
+      margin: 10px;
+      padding: 5px;
+      list-style: none;
+      display: block;
+      float: left;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #eee;
+      text-align: center;
+      line-height: 100px;
+    }
+  </style>
+</head>
+<body>
+  <ul></ul>
+
+  <script src="build/build.js"></script>
+
+  <script>
+    var scroll = require('scroll-to');
+    var events = require('event');
+    var ul = document.querySelector('ul');
+
+    for (var i = 0; i < 500; i++) {
+      var li = document.createElement('li');
+      li.textContent = 'item ' + i;
+      ul.appendChild(li);
+    }
+
+    events.bind(window, 'click', function(e){
+      var x = e.pageX;
+      var y = e.pageY;
+      console.log('scrolling to (%s, %s)', x, y);
+      scroll(x, y);
+    });
+  </script>
+</body>
+</html>

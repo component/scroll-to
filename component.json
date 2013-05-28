@@ -1,0 +1,19 @@
+{
+  "name": "scroll-to",
+  "repo": "component/scroll-to",
+  "description": "Smooth window scroll to position with requestAnimationFrame",
+  "version": "0.0.1",
+  "keywords": ["scroll", "animate", "scroll-to"],
+  "dependencies": {
+    "component/raf": "1.0.0",
+    "component/tween": "1.0.0"
+  },
+  "development": {
+    "component/event": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
