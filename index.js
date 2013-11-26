@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -49,6 +48,8 @@ function scrollTo(x, y, options) {
   }
 
   animate();
+  
+  return tween;
 }
 
 /**
