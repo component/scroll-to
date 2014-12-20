@@ -12,6 +12,10 @@
     "raf-component": "1.0.0",
     "tween-component": "1.0.0"
   },
+  "browser": {
+    "raf": "raf-component",
+    "tween": "tween-component"
+  },
   "license": "MIT",
   "main": "index.js",
   "component": {
