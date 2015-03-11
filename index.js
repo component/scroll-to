@@ -25,8 +25,9 @@ function scrollTo(x, y, options) {
   // start position
   var start = scroll(options.box);
   
-  if (options.box && options.box.scrollTop) {
-    y = y + options.box.scrollTop;
+  if (options.box) {
+    y += options.box.scrollTop || 0;
+    x += options.box.scrollLeft || 0;
   }
   
   // setup tween
@@ -37,7 +38,10 @@ function scrollTo(x, y, options) {
 
   // scroll
   tween.update(function(o){
-    if (options.box) options.box.scrollTop = o.top;
+    if (options.box) {
+      options.box.scrollTop = o.top;
+      options.box.scrollLeft = o.left;
+    }
     else window.scrollTo(o.left | 0, o.top | 0);
   });
 
