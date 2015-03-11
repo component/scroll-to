@@ -1,6 +1,6 @@
 {
   "name": "scroll-to",
-  "repo": "solde9/scroll-to",
+  "repo": "component/scroll-to",
   "description": "Smooth window scroll to position with requestAnimationFrame",
   "version": "0.0.1",
   "keywords": ["scroll", "animate", "scroll-to"],
