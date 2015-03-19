@@ -5,8 +5,8 @@
   "version": "0.0.1",
   "keywords": ["scroll", "animate", "scroll-to"],
   "dependencies": {
-    "component/raf": "1.0.0",
-    "component/tween": "1.0.0"
+    "component/raf": "1.2.0",
+    "component/tween": "1.2.0"
   },
   "development": {
     "component/event": "*"

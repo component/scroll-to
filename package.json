@@ -9,12 +9,12 @@
     "scroll-to"
   ],
   "dependencies": {
-    "raf-component": "1.0.0",
-    "tween-component": "1.0.0"
+    "component-raf": "1.2.0",
+    "component-tween": "1.2.0"
   },
   "browser": {
-    "raf": "raf-component",
-    "tween": "tween-component"
+    "raf": "component-raf",
+    "tween": "component-tween"
   },
   "license": "MIT",
   "main": "index.js",
