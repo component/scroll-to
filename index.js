@@ -2,8 +2,9 @@
  * Module dependencies.
  */
 
-var Tween = require('tween');
-var raf = require('raf');
+var hasDom = typeof window !== 'undefined';
+var Tween = hasDom ? require('tween') : function() {};
+var raf = hasDom ? require('raf') : function() {};
 
 /**
  * Expose `scrollTo`.
