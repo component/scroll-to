@@ -21,9 +21,11 @@ module.exports = scrollTo;
 
 function scrollTo(x, y, options) {
   options = options || {};
+  
+  var scroller = options.scroller || window;
 
   // start position
-  var start = scroll();
+  var start = scroll(scroller);
 
   // setup tween
   var tween = Tween(start)
@@ -33,7 +35,7 @@ function scrollTo(x, y, options) {
 
   // scroll
   tween.update(function(o){
-    window.scrollTo(o.left | 0, o.top | 0);
+    scroller.scrollTo(o.left | 0, o.top | 0);
   });
 
   // handle end
@@ -59,8 +61,8 @@ function scrollTo(x, y, options) {
  * @api private
  */
 
-function scroll() {
-  var y = window.pageYOffset || document.documentElement.scrollTop;
-  var x = window.pageXOffset || document.documentElement.scrollLeft;
+function scroll(scroller) {
+  var y = scroller.scrollTop || window.pageYOffset;
+  var x = scroller.scrollLeft || window.pageXOffset;
   return { top: y, left: x };
 }
